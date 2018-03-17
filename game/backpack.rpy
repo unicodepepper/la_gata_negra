@@ -1,14 +1,5 @@
-default weekdays = ("sunday","monday","tuesday","wednesday","thursday","friday","saturday")
-default times = ("dawn","noon","dusk","midnight")
 default backpack_items = []
-default currplace= "home"
-default clockint = 3
-default clockstr = ""
-default dateint  =-1
-default datestr  = ""
-default displaytime=""
-default connections={     "home":["city"],
-                          "city":["home"]}
+
 
 init:
     python:
@@ -41,33 +32,38 @@ screen backpack(items=[["hola",NullAction()]]):
             # than the vpgrid proper.
             #side_xalign 0.5
             vbox:
+                # frame:
+                #     xfill True
+                #     text "Go somewhere..."
+                # vpgrid:
+                #     cols 2
+                #     for i in items:
+                #         frame:
+                #             xysize (294,50)
+                #             textbutton i.caption action i.action:
+                #                 tooltip "Go to the "+i.caption+"."
+                #                 yalign 0.5
+                #
+                # null height 20
+
                 frame:
                     xfill True
-                    text "Go somewhere..."
+                    text "Use an item."
                 vpgrid:
                     cols 2
-                    for i in items:
+                    frame:
+                        xysize (294,50)
+                        textbutton "Go back." action Return("back"):
+                            tooltip "Return to the previous screen."
+                            yalign 0.5
+                    for i in backpack_items:
                         frame:
                             xysize (294,50)
-                            textbutton i.caption action i.action:
-                                tooltip "Go to the "+i.caption+"."
+                            textbutton i.name action Return(i.action):
+                                tooltip i.description
                                 yalign 0.5
-
-                null height 20
-
-                frame:
-                    xfill True
-                    text "...or use an item."
-                vpgrid:
-                    cols 2
-                    for i in backpack_items:
-                        # frame:
-                        #     xysize (294,50)
-                        #     textbutton i.name action Return(i.action):
-                        #         tooltip i.description
-                        #         yalign 0.5
-                        imagebutton auto i.image action Return(i.action):
-                            tooltip i.description
+                        # imagebutton auto i.image action Return(i.action):
+                        #     tooltip i.description
         frame:
             padding (10,10)
             $tooltip=GetTooltip()
@@ -89,34 +85,3 @@ screen stats_screen:
                     ui.text("there is 1 item in your backpack.")
                 else:
                     ui.text("there are "+str(len(backpack_items))+" items in your backpack.")
-
-label mainloop:
-    python:     #BUILDING THE MENU
-        menulist=[]
-        for i in connections[currplace]:
-            menulist.append((i,i)) #TODO change it so locations have pretty names?
-        currjump=renpy.display_menu(menulist,screen="backpack")
-        if currjump[:5]=="item_":
-            pass #TODO You sit down and take [item] out...
-        else:
-            currplace=currjump
-    scene bg black with dissolve
-    call time_advance
-    scene timebg:
-        zoom 1280 #TODO fix so that the colors represent the time
-    show expression "bg "+currplace as bg
-    with dissolve
-    $renpy.jump(currplace)
-    return
-
-label time_advance():
-    python:
-        clockint+=1                                 #advance the time
-        if clockint >=4:                            #carry over
-            clockint=0
-            dateint = dateint+1
-        dateWeekModulo = dateint%7                  #set display text
-        datestr = weekdays[dateWeekModulo]
-        clockstr= times[clockint]
-        displaytime = "it's "+datestr+" at "+clockstr+"."
-    return
