@@ -5,7 +5,7 @@ label mainloop:
             menulist.append((i,i)) #TODO change it so locations have pretty names?
         currjump=renpy.display_menu(menulist,screen="choice")
         if currjump=="backpack_label":
-            currjump=renpy.display_menu(menulist,screen="backpack")
+            currjump=renpy.call_screen("backpack")
             if currjump=="back":
                 renpy.jump("mainloop")
     $renpy.call(currjump)
