@@ -11,7 +11,8 @@ init:
                 self.action=action
                 pass
 
-screen backpack(items=[["hola",NullAction()]]):
+screen backpack( items=[["hola",NullAction()]] ):
+    tag menu
     vbox:
         xalign 0.5
         yalign 0.5
