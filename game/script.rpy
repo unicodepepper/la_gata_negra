@@ -1,7 +1,14 @@
 init:
     python:
         #item declarations go down here
-        blue_key=thing(name="Blue key", description="Just a regular key.", image="key_%s.png", action="key")
+        blue_key=thing( name="Blue key",
+                        description="Just a regular key.",
+                        image="key_%s.png",
+                        action="key")
+        music_player=thing( name="music player",
+                            description="A portable music player.",
+                            image="key_%s.png",
+                            action="music_player")
     image bg black = "#000"
 
 
@@ -10,7 +17,9 @@ default events = {  "home":None,
                     "labo":None,
                     "track":None,
                     "studio":None}
+
 default currplace= "home"
+
 default connections={     "home":["city"],
                           "city":["home","labo","track","studio"],
                           "labo":["city"],
@@ -27,14 +36,10 @@ label bgshow:
     return
 
 
-define b = Character("blessed",
-                     who_color="#f00")
-define h = Character("hexed",
-                     who_color="#0f0")
-define c = Character("charmed",
-                     who_color="#00f")
-define s = Character("strange",
-                     who_color="#fff")
+define b = Character("{color=#f00}blessed{/color}")
+define h = Character("{color=#0f0}hexed{/color}")
+define c = Character("{color=#00f}charmed{/color}")
+define s = Character("{color=#fff}strange{/color}")
 
 
 
@@ -93,35 +98,40 @@ label start:
 label home:
     $currplace="home"
     call bgshow
-    "you're at home"
     return
 
 label city:
     $currplace="city"
     call bgshow
-    "you're at the city"
     return
 
 label labo:
     $currplace="labo"
     call bgshow
-    "you're at the laboratory"
     return
 
 label track:
     $currplace="track"
     call bgshow
-    "you're at the track"
     return
 
 label studio:
     $currplace="studio"
     call bgshow
-    "you're at the studio"
     return
 
 
 
 label key:
     "you have a super secret key"
+    return
+label music_player:
+    if listeningToMusicPlayer:
+        "you took the music player off"
+        listeningToMusicPlayer = False
+    else:
+        listeningToMusicPlayer = True
+        "you put on the music player"
+        "dun durun dun dun"
+        "you just heard some music"
     return

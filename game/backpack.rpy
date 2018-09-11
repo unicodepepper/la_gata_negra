@@ -1,4 +1,4 @@
-default backpack_items = []
+default backpack_list = []
 
 
 init:
@@ -57,7 +57,7 @@ screen backpack( items=[["hola",NullAction()]] ):
                         textbutton "Go back." action Return("back"):
                             tooltip "Return to the previous screen."
                             yalign 0.5
-                    for i in backpack_items:
+                    for i in backpack_list:
                         frame:
                             xysize (294,50)
                             textbutton i.name action Return(i.action):
@@ -82,7 +82,8 @@ screen stats_screen:
             if displaytime:
                 text "[displaytime]" xalign 1.0
             python:
-                if len(backpack_items) == 1: #TODO make modular so I can put weird stuff
+                if len(backpack_list) == 1: #TODO make modular so I can put weird stuff
+                                            #what the fuck did i mean by that
                     ui.text("there is 1 item in your backpack.")
                 else:
-                    ui.text("there are "+str(len(backpack_items))+" items in your backpack.")
+                    ui.text("there are "+str(len(backpack_list))+" items in your backpack.")
