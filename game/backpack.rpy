@@ -71,7 +71,8 @@ screen backpack( items=[["hola",NullAction()]] ):
             xysize (600,100)
             if tooltip:
                 text "[tooltip]"
-
+            else:
+                text "sorry for the shitty icon, it's all i've made"
 screen stats_screen:
     zorder 100
     style_prefix "stats"

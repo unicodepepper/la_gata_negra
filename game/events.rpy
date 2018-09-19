@@ -21,7 +21,7 @@ label hexed_intro:
     if firstvisit == "hexed":
         s "I don't know, I just wanted to kill some time."
         h "I see..."
-    else:
+    else: #add more meat to this shit
         s "See, I really want to write, but I've been having a lot of trouble with motivation lately."
         s "You always seem to have something to keep busy with, so I was curious to know how you did it."
         h "I see..."
@@ -51,7 +51,8 @@ label hexed_intro:
     return
 
 label charmed_intro:
-    "this is charmed's intro"
+    #don't think so much, just look at the world
+    #there's so much out there
     return
 
 label blessed_intro:
@@ -70,21 +71,80 @@ label blessed_intro:
     if firstvisit ==  "blessed":
         s "I've been trying to write for a while, but I haven't been able to."
         s "I thought if I came here I'd be able to get more inspired for it."
+        b "Could you come sit besides me?"
+        "I tiptoed around some canvases and reached [b.name]."
+        b "What about your writing is making you feel distant from it?"
+        menu:
+            b "What about your writing is making you feel distant from it?"
+            "The story.":
+                b "..."
+                b "What do you think is the purpose of telling a story?"
+                s "Uh... I guess to communicate with people."
+                b "And what do you want to communicate to them?"
+                s "I don't know."
+                s "I guess... my own feelings about the world."
+                b "Feelings?"
+                b "What kind of feelings?"
+                s "It's embarrassing to talk about them, you know..."
+                b "But won't you be showing them to people with your writing?"
+                b "Don't you want to start with me?"
+                s "I guess..."
+                s "I'd say it's hope, but also loneliness, and... a lot of nostalgia."
+                s "But not just nostalgia for things that happened."
+                s "Nostalgia for things that never happened, or might have happened, or might happen."
+                s "Does that make sense?"
+                b "Does it make sense to you?"
+                s "I think."
+                b "Don't you think that's what really matters?"
+            "The characters":
+                b "So you have a story, but you don't have characters for it?"
+                "I nod for a second, before clarifying."
+                s "It's not that I don't have characters, but..."
+                s "They all feel really bland and flat to me. It's like there's only a single type of person I can write."
+                s "I think I'm just inserting myself in everything, and I have no idea how to change that."
+                b "Are they really reflections of you? Or are they reflections of who you think you are?"
+                b "Wouldn't someone as deep as you be able to write characters that aren't bland and flat?"
+                s "I'm not that deep, though."
+                b "Do you think you're not as deep as anyone else?"
+                s "..."
+                s "Maybe."
     else:
         s "I don't know, I was just looking."
         s "Would you like me to leave?"
         b "Why would I want you to? Aren't all artists siblings?"
-    b "Could you come sit besides me?"
-    "I tiptoed around some canvases and reached [b.name]."
-    b "What about your writing is making you feel distant from it?"
-    menu:
-        b "What about your writing is making you feel distant from it?"
-        "The plot.":
-            pass
-        "The characters":
-            pass
-    #add some advice... you know the drill
+        s "I'm not really that much of an artist, though."
+        b "Could you come sit besides me?"
+        "I hesitated, then tiptoed around some canvases and reached [b.name]."
+    b "Could you please hold this for me?"
+    "[b.name] handed me a wet paintbrush."
+    b "Can you try doing something on that canvas over there?"
+    "They gestured towards an empty canvas. I tried to keep the brush in the air, careful not to let it drip."
+    s "What would you like me to do?"
+    b "What do you feel like doing?"
+    "They didn't even look at me. They seemed very focused on the piece in front of them."
+    "I shrugged."
+    s "I don't feel like doing anything."
+    "They stayed silent, and just kept painting."
     if listeningToMusicPlayer:
-        listeningToMusicPlayer = False
-        #why are you trying to drown your mind out? shouldn't you listen to it?
+        $listeningToMusicPlayer = False
+        b "Are you afraid of your own mind?"
+        s "What do you mean?"
+        b "Weren't you drowning it with music by the time you got here?"
+        "Indeed, I was. Even though I had taken out my headphones, the place was so silent you could hear their sounds very faintly."
+        s "I guess I just get bored."
+        b "And what's the problem with that?"
+        s "I... don't know."
+        s "Sometimes bad thoughts come to my mind when I'm bored."
+        b "And that's why you try to avoid all your thoughts?"
+        b "If your house was dirty, would you avoid coming to it as well? Or would you make an effort to clean it?"
+        s "..."
+        s "I should make an effort to clean it, in that case."
+        s "But it's hard when you're depressed."
+        b "..."
+        b "Do you think I could help you with that?"
+    b "Why don't you come over here some other time, after I'm done with these paintings?"
+    b "Wouldn't it be best if I could give you my full attention?"
+    s "Yeah, you're right..."
+    b "You won't leave me waiting, right?"
+    s "No, I won't."
     return

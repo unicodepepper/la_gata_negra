@@ -128,9 +128,9 @@ label key:
 label music_player:
     if listeningToMusicPlayer:
         "you took the music player off"
-        listeningToMusicPlayer = False
+        $ listeningToMusicPlayer = False
     else:
-        listeningToMusicPlayer = True
+        $ listeningToMusicPlayer = True
         "you put on the music player"
         "dun durun dun dun"
         "you just heard some music"
