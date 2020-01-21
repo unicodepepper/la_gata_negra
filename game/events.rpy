@@ -148,3 +148,30 @@ label blessed_intro:
     b "You won't leave me waiting, right?"
     s "No, I won't."
     return
+
+
+
+label cat_story:
+    b "There was once a cat who really loved apples."
+    b "Red apples, green apples, sweet apples, sour apples, big apples, small apples..."
+    b "No matter what kind, they had a great taste for them."
+    b "They could tell what apples were good or bad at a glance."
+    b "Every day, as soon as the sun rose, they would walk out of their house and into the fields around it."
+    b "The fields were, of course, full of apple trees. But most of them were your average, everyday apples."
+    b "They were looking for the greatest ones. The best of the best. And they found them."
+    b "They found one. They found two. They found ten."
+    b "Sometimes their rabbit friend would find great ones for them too, as a gift."
+    b "They would hold any especially nice apple they got, and admire the beauty of its skin."
+    b "\"Oh, this is amazing! I love this one!\", they would say to themselves."
+    b "I can tell it's going to be delicious!"
+    b "Sometimes, they would take a bite or two right there. But without fail, they would stick it right into a basket and continue looking."
+    b "When the sun was setting and their basket was full, the cat would head back home."
+    b "\"I found so many good apples today\", they would think. \"But I am so tired after searching so much.\""
+    b "\"I won't enjoy an apple as well as I should when I'm feeling so drained.\""
+    b "Then they would carefully put the apples away and eat plain potatoes before sleeping."
+    b "As the days went by, their house was getting fuller and fuller with apples."
+    b "They were having a hard time even walking around!"
+    b "But every morning without fail, they would go out to search for more apples."
+    b "And every evening without fail, they'd save the apples for later, eat potatoes and fall asleep."
+    b "\"I love apples so much\", the cat said to their rabbit friend. \"But I never get to eat them.\""
+    b "The rabbit, of course, thought the cat had no reason to be this sad."
