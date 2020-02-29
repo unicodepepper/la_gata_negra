@@ -1,15 +1,15 @@
 init:
     python:
         #item declarations go down here
-        blue_key=thing( name="Blue key",
+        blue_key=item( name="Blue key",
                         description="Just a regular key.",
                         image="key_%s.png",
                         action="key")
-        music_player=thing( name="music player",
+        music_player=item( name="music player",
                             description="A portable music player.",
                             image="key_%s.png",
                             action="music_player")
-    image bg black = "#000"
+    image black = "#000"
 
 
 default events = {  "home":None,
@@ -19,19 +19,32 @@ default events = {  "home":None,
                     "studio":None}
 
 default currplace= "home"
-
+default listeningToMusicPlayer = False
 default connections={     "home":["city"],
                           "city":["home","labo","track","studio"],
                           "labo":["city"],
                           "track":["city"],
                           "studio":["city"]}
 
-label bgshow:
-    scene bg black with dissolve
-    call time_advance
-    scene timebg:
+label bgshow(advance=False): #TODO add a place argument
+    scene black with dissolve
+    python:
+        #I'm using these variables because it works funky if i put the expression in the same line. 
+        timeColorTransitionStart=float(clockint)/4
+        timeColorTransitionEnd=float(clockint+1)/4
+    show timebg:
+        xalign timeColorTransitionStart#(float(clockint)/4)
         zoom 1280 #TODO fix so that the colors represent the time
-    show expression "bg "+currplace as bg
+    if advance:
+        call time_advance
+        if clockint==0: #reset to the start of the long strip if we're at the end already, otherwise just advance
+            show timebg:
+                linear 1.0 xalign timeColorTransitionEnd#(float(clockint+1)/4) 
+                xalign 0.0
+        else:
+            show timebg:
+                linear 1.0 xalign timeColorTransitionEnd#(float(clockint+1)/4) 
+    #show expression "bg "+currplace as bg
     with dissolve
     return
 
@@ -48,7 +61,7 @@ label start:
     $events["labo"] = "hexed_intro"
     $events["track"] = "charmed_intro"
     $events["studio"] = "blessed_intro"
-    call bgshow
+    call bgshow(advance=True)
     s "I'm a writer."
     s "I write things."
     s "And yet, I don't write things."
@@ -93,32 +106,34 @@ label start:
             "Maybe I'll go visit the computer lab that's on the city."
             "One of my friends spends all their time there."
             "I don't know for sure what I'll do, but I'm sure it will be good."
-    jump mainloop
+    jump mainloop #in exploration.rpy
 
-label home:
-    $currplace="home"
-    call bgshow
-    return
-
-label city:
-    $currplace="city"
-    call bgshow
-    return
-
-label labo:
-    $currplace="labo"
-    call bgshow
-    return
-
-label track:
-    $currplace="track"
-    call bgshow
-    return
-
-label studio:
-    $currplace="studio"
-    call bgshow
-    return
+## why the herk am i duplicating so much code. i should probably write a fucncriont for this. 2020-02-29
+##ok im trying out something bold
+#label home:
+#    $currplace="home"
+#    call bgshow
+#    return
+#
+#label city:
+#    $currplace="city"
+#    call bgshow
+#    return
+#
+#label labo:
+#    $currplace="labo"
+#    call bgshow
+#    return
+#
+#label track:
+#    $currplace="track"
+#    call bgshow
+#    return
+#
+#label studio:
+#    $currplace="studio"
+#    call bgshow
+#    return
 
 
 

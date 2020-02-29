@@ -1,3 +1,10 @@
+label test_event:
+    'this test event just repeats itself'
+    '[clockint] [clockstr]'
+    $events[currplace]="test_event"
+    call bgshow(advance=True)
+    return
+
 label hexed_intro:
     "I step into the computer lab."
     "There's someone inside it, fiddling with the guts of a computer on a table."
