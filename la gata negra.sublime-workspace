@@ -1,0 +1,273 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"renpy",
+				"renpy.call"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"upper",
+				"Convert Case: Upper Case"
+			],
+			[
+				"merge",
+				"Sublime Merge: Open Repository"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/permafiles/my work/renpy/la_gata_negra",
+		"/C/permafiles/my work/renpy/la_gata_negra/game"
+	],
+	"file_history":
+	[
+		"/C/permafiles/my work/renpy/la_gata_negra/game/script.rpy",
+		"/C/permafiles/my work/renpy/la_gata_negra/game/exploration.rpy",
+		"/C/permafiles/my work/renpy/la_gata_negra/game/events.rpy",
+		"/C/permafiles/my work/renpy/la_gata_negra/game/timekeeping.rpy",
+		"/C/permafiles/my work/renpy/la_gata_negra/game/backpack.rpy",
+		"/C/permafiles/my work/renpy/la_gata_negra/game/screens.rpy",
+		"/C/Users/cool_/Desktop/filepart/carrying/other files/oof/media/research/not - equalized.txt",
+		"/C/permafiles/my work/autohotkey/dq.ahk",
+		"/C/permafiles/my work/autohotkey/useful shortcuts.ahk",
+		"/C/Users/cool_/Downloads/editor_local/editor/shared/script/exporter.js",
+		"/C/Users/cool_/Downloads/bitsy_X2-master/bitsy_X2-master/editor/shared/script/exporter.js",
+		"/C/Users/cool_/Downloads/editor_local/editor/index.html",
+		"/C/Users/cool_/Downloads/write_your_game_s_title_here(2).html",
+		"/C/Users/cool_/Downloads/bitsy_X2-master/bitsy_X2-master/editor/index.html",
+		"/C/Users/cool_/Downloads/bitsy_X2-master/bitsy_X2-master/index.html",
+		"/C/Users/cool_/Downloads/write_your_game_s_title_here(3).html",
+		"/C/Users/cool_/Downloads/write_your_game_s_title_here.bitsy",
+		"/C/permafiles/my work/renpy/mars_vn/game/script.rpy",
+		"/C/permafiles/my work/autohotkey/MirrorBoard_XKCD.ahk",
+		"/C/Users/cool_/Desktop/dq.ahk",
+		"/C/Users/cool_/Desktop/weird cash sign.ahk",
+		"/C/Users/cool_/Downloads/write_your_game_s_title_here.html",
+		"/C/Users/cool_/Downloads/write_your_game_s_title_here(1).html",
+		"/C/Users/cool_/Desktop/Bitsy.html",
+		"/C/Users/cool_/Downloads/geli_recovery.key",
+		"/C/Users/cool_/Downloads/geli(1).key",
+		"/C/Users/cool_/Downloads/geli.key",
+		"/C/Users/cool_/AppData/Roaming/kisekae/Local Store/#SharedObjects/kisekae.swf/my_data.sol",
+		"/C/Users/cool_/Desktop/bruh moment test.rpy",
+		"/C/Users/cool_/Desktop/renpy-7.3.5-sdk/tutorial/game/script.rpy"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 102.0,
+		"where_history":
+		[
+			"C:\\permafiles\\my work\\renpy\\la_gata_negra"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"testvar2",
+			"testvar1",
+			"listeningToMusicPlayer",
+			"backpack_label",
+			"use",
+			"stats",
+			"thing(",
+			"thing",
+			"\\nbut, \\[\\d\\d\\.\\d\\d\\.\\d\\d \\d\\d:\\d\\d\\]\\n",
+			"(https.*\\n)\\nhttp",
+			"(https.*\\n)\\nhttps",
+			"(https.*)\\n\\n",
+			"suggestions",
+			"\\nbut, \\[\\d\\d\\.\\d\\d\\.\\d\\d \\d\\d:\\d\\d\\]\\n",
+			"but, \\[\\d\\d\\.\\d\\d\\.\\d\\d \\d\\d:\\d\\d\\]\\n",
+			"but",
+			" ",
+			"\\nbut, \\[\\d\\d\\.\\d\\d\\.\\d\\d \\d\\d:\\d\\d\\]\\n",
+			"but, \\[\\d\\d.*",
+			"vomito",
+			"338",
+			"pig",
+			";",
+			"spit",
+			"exportgame",
+			"exit",
+			"moveplayerth",
+			"\\(exit",
+			"\\(exit ",
+			"exit ",
+			"slide_r",
+			"1",
+			"\\n",
+			"\\*",
+			"(\\d\\d) comic online in high quality.pdf'*",
+			"\\d\\d.*",
+			"^.*\\#(\\d\\d)",
+			"^.*'Sonic",
+			"^([A-Za-z]*)",
+			"^([A-Za-z])*",
+			"exit",
+			"<script",
+			"$>!l::",
+			"SendInput"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"",
+			"$1https",
+			"$1",
+			"",
+			"\\n",
+			"",
+			"'\\n'",
+			"",
+			"$1",
+			"",
+			"Sonic IDW $1",
+			"'Sonic",
+			"**$1**"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "la gata negra.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 260.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,5 +1,5 @@
 default backpack_list = []
-
+default show_items = True
 
 init:
     python:
@@ -15,14 +15,14 @@ screen backpack( items=[["hola",NullAction()]] ):
     tag menu
     vbox:
         xalign 0.5
-        yalign 0.5
+        yalign 0.3
         xsize 600
-        ysize 600
-        xfill True
-        yfill True
-        vpgrid:
-            ymaximum 400
-            yminimum 400
+        ysize 400
+        fixed:
+          xsize 600
+          ysize 300
+          vpgrid:
+            yfill True
             cols 1
             #spacing 5
             draggable True
@@ -51,20 +51,43 @@ screen backpack( items=[["hola",NullAction()]] ):
                 ## end of this piece of code to replace the backpack menu
                 frame:
                     xfill True
-                    text "Use an item."
-                vpgrid:
+                    if show_items:
+                        textbutton "Use an item" action ToggleVariable("show_items") xfill True
+                    else:
+                        textbutton "Use an item ("+str(len(backpack_list))+")" action ToggleVariable("show_items") xfill True
+
+                if show_items:
+                  vpgrid:
                     cols 2
                     frame:
                         xysize (294,50)
                         textbutton "Go back." action Return("back"):
                             tooltip "Return to the previous screen."
                             yalign 0.5
+                            xfill True
+                            yfill True
+                    frame:
+                        xysize (294,50)
+                        textbutton "Another button." action AddToSet(backpack_list,music_player) sensitive True:
+                            tooltip "Add a music player to the backpack list."
+                            yalign 0.5
+                            xfill True
+                            yfill True
+                    frame:
+                        xysize (294,50)
+                        textbutton "Clear buttons." action RemoveFromSet(backpack_list,music_player) sensitive True:
+                            tooltip "Clear the backpack list.."
+                            yalign 0.5
+                            xfill True
+                            yfill True
                     for i in backpack_list:
                         frame:
                             xysize (294,50)
                             textbutton i.name action Return(i.action):
                                 tooltip i.description
                                 yalign 0.5
+                                xfill True
+                                yfill True
                         ##kinda sad that this image arg is unused - I'm hoping to add it in a future release of the game tho. 
                         ##
                         # imagebutton auto i.image action Return(i.action):
@@ -76,7 +99,7 @@ screen backpack( items=[["hola",NullAction()]] ):
             if tooltip:
                 text "[tooltip]"
             else:
-                text "Hover an item to know more."
+                text ""
 
 
 screen stats_screen: #this is for the stats at the top left corner i think. im a little bit drunk

@@ -5,6 +5,60 @@ label test_event:
     call bgshow(advance=True)
     return
 
+label hexed_cold_intro:
+
+    h "Sometimes I might feel like I care more about possibilities than about concrete things, you know?"
+    h "It's somewhat like I can spend hours planning how to do something, but at the time of doing it, I lose all interest."
+    h "It's not like I might be lazy, though."
+    h "I might put in hours of work into checking that every single bit of the process might work fine."
+    h "Maybe searching for the most efficient way to get to my goal, or perhaps making sure that it can realistically be done."
+    h "But then... I might just not."
+    h "One of the thought that might cross my mind is that if I am ready to do it, I don't have to do it {i}now{/i}."
+    h "I could perhaps do it next week, or next month, or when I have some free time."
+    h "But I might never have free time."
+    h "There could always be something to do."
+    h "And that potential could stay there."
+    h "Now, I might not really feel it as a loss."
+    h "After all, I could do it at any time, so my possibilities might not have been reduced."
+    h "But that's probably a faulty way of thinking."
+    h "Maybe I should see it another way - I only have so many seconds."
+    h "So it's possible that every time I put something off, I'm already rejecting the possibility of having done it there and then."
+    h "Could any of that make sense to you?"
+    h "..."
+    s "..."
+    h "..."
+    s "Yeah."
+    h "Maybe?"
+    s "Yup."
+    h "Anyways... perhaps you can find what you were looking for under the cabinet over there."
+    s "Right, here it is. You compiled all these blueprints yourself, didn't you?"
+    h "Yeah, probably."
+    s "So you can really finish something. I think you just need the motivation to do it."
+    s "For now that's external, but with time I'm sure you can learn to handle yourself."
+    "I grabbed the blueprints that Hexed had prepared for me, and headed out of her lab."
+    "The stack of paper was still somewhat warm from the printer, though it's hard to tell - her lab is always warm."
+    "Too warm."
+    "Uncomfortably warm."
+    "The cold air felt refreshing against my face, in the few seconds before it started biting. "
+    return
+
+label blessed_blueprints:
+    "I walk into the observatory."
+    b "are those the blueprints for the machine you were building?"
+    return
+
+label strange_blueprints:
+    "I walk into my room and neatly place the blueprints on my work desk."
+    "It's cold. I like it that way."
+    "Not dead-in-20-minutes cold like outside, but still pretty cold."
+    "I'd rather avoid any type of sweat as I work on these sketches. They're very delicate machines."
+    "Both precision and cleanliness are critical to them."
+    return
+
+label charmed_blueprints:
+    "Charmed is messing with an engine."
+    return
+
 label hexed_intro:
     "I step into the computer lab."
     "There's someone inside it, fiddling with the guts of a computer on a table."
@@ -65,7 +119,7 @@ label charmed_intro:
 label blessed_intro:
     "I walk into the art studio."
     "It's a huge space that has been designated for all kinds of arts - even arts that shouldn't really go together."
-    "There's areas for painting, theatre, music, sculpting, even writing."
+    "There's areas for painting, theater, music, sculpting, even writing."
     "However, there were wet canvases spread over most the floor, so I had to mind my step."
     b "Could you please try not to step on my paintings before they dry?"
     if listeningToMusicPlayer:
@@ -182,3 +236,4 @@ label cat_story:
     b "And every evening without fail, they'd save the apples for later, eat potatoes and fall asleep."
     b "\"I love apples so much\", the cat said to their rabbit friend. \"But I never get to eat them.\""
     b "The rabbit, of course, thought the cat had no reason to be this sad."
+    return
