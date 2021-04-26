@@ -61,7 +61,7 @@ screen backpack( items=[["hola",NullAction()]] ):
                     cols 2
                     frame:
                         xysize (294,50)
-                        textbutton "Go back." action Return("back"):
+                        textbutton "Go back." action Return("__back"):
                             tooltip "Return to the previous screen."
                             yalign 0.5
                             xfill True

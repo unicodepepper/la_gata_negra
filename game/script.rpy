@@ -13,9 +13,9 @@ init:
 
 default location_names = {  "home":"workshop",
                             "city":"crossroads",
-                            "labo":"computer laboratory",
+                            "labo":"computer lab",
                             "track":"gymnasium",
-                            "astro":"astronomical observatory"}
+                            "astro":"observatory"}
 
 default events = {  "home":None,
                     "city":None,
@@ -58,35 +58,17 @@ define b = Character("{color=#f00}blessed{/color}")
 define h = Character("{color=#0f0}hexed{/color}")
 define c = Character("{color=#00f}charmed{/color}")
 define s = Character("{color=#fff}strange{/color}")
+define a = Character("{color=#ff0}Announcer{/color}")
 
 
 
 
 label start:
-    $currplace="labo"
-    $events["astro"]="blessed_blueprints"
-    $events["home"]="strange_blueprints"
-    $events["track"]="charmed_blueprints"
+    $currplace="home"   
+    $events["home"]="strange_home_intro"
 
 
     call bgshow(advance=True)
-
-    "Tick."
-    "The gears on the desk spin one step forwards."
-    s "Hmmm..."
-    s "Does that look right?"
-    h "I think that looks right."
-    s "Let's try another step."
-    "Tock."
-    "Another step."
-    s "Looking good so far, isn't it?"
-    h "Yeah, that's probably, like, exciting, or something."
-    h "Maybe you should try running it on auto for a while."
-    "With the flick of a switch, I start running it."
-    "Tick-tock. Tick-tock."
-
-    ##TODO: add an option to "head back inside" or to repeat the current event?)
-
 
     jump mainloop #in exploration.rpy
 

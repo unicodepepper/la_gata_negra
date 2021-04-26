@@ -16,7 +16,7 @@ label mainloop:
             # if the player chose to open their backpack, open their backpack
             if currjump=="__backpack_label": #still no clue how to do private vars in renpy
                 currjump=renpy.call_screen("backpack") #@ backpack.rpy #todo: change the backpack list to be passed instead of global
-                if currjump=="back": #clicking the "back" button on the backpack menu
+                if currjump=="__back": #clicking the "back" button on the backpack menu
                     renpy.jump("mainloop") #if a backpack item sets up an event in the current location, 
                                             #this will result in the event being triggered immediately. 
                 else:
@@ -24,7 +24,7 @@ label mainloop:
             else:
                 # if the player Did Not chose to open the backpack, go to the place they picked, but Do Not jumpto a label.
                 currplace=currjump 
-                renpy.call(label='bgshow', advance=True) #pretty background with no time advance 
+                renpy.call(label='bgshow') #pretty background with no time advance 
                 ## 2020-04-19: ^^ this should probably be handled by the event itself, not by the mainloop.
                 ## sure, it adds some boilerplate (along with resetting itself in the case of events that are repeated)
                 ## but it adds the freedom not to showw it if needded. 
